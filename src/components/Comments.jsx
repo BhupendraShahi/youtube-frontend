@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { axiosInstance } from "../config";
 import Comment from "./Comment";
 
 const Container = styled.div``;
@@ -41,7 +41,7 @@ const Comments = ({ videoId }) => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const res = await axios.get(`/comments/${videoId}`);
+        const res = await axiosInstance.get(`/comments/${videoId}`);
         setComments(res.data);
       } catch (err) { }
     };
@@ -55,7 +55,7 @@ const Comments = ({ videoId }) => {
       videoId
     }
 
-    await axios
+    await axiosInstance
       .post("/comments", data)
       .then(res => setComments([res.data, ...comments])) 
       .catch(err => console.error(err));

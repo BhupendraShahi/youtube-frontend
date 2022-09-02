@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
@@ -6,6 +5,7 @@ import { loginFailure, loginStart, loginSuccess } from "../redux/userSlice";
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { axiosInstance } from "../config";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -79,7 +79,7 @@ const SignIn = () => {
     e.preventDefault();
     dispatch(loginStart());
     try {
-      const res = await axios.post("/auth/signin", { name, password });
+      const res = await axiosInstance.post("/auth/signin", { name, password });
       dispatch(loginSuccess(res.data));
       navigate("/")
     } catch (err) {
@@ -91,7 +91,7 @@ const SignIn = () => {
     dispatch(loginStart());
     signInWithPopup(auth, provider)
       .then((result) => {
-        axios
+        axiosInstance
           .post("/auth/google", {
             name: result.user.displayName,
             email: result.user.email,
@@ -112,7 +112,7 @@ const SignIn = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    await axios.post("/auth/signup", { name, email, password })
+    await axiosInstance.post("/auth/signup", { name, email, password })
       .then((res) => {
         setName("");
         setEmail("");
