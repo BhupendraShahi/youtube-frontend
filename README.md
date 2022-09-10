@@ -1,3 +1,24 @@
+#youtube-clone
+This is the frontend part of a clone of youtube made using React.js, Node.js, Express.JS, MongoDB and Firebase. The client/frontend is hosted on Netlify and server/backend is hosted on Heroku.
+
+# Features
+1. Authentication.
+2. Like/Dislike.
+3. Subscribe/unsubscribe.
+4. Comment.
+5. upload video.
+6. Similar video recommendation on the side panel, etc.
+
+# Frontend
+1.Made uing React.js.
+2. Styling is done using React Components.
+3. JWT and Firebase authentication are used for authentication.
+4. Redux is used for state management.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
