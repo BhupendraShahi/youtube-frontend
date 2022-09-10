@@ -1,4 +1,4 @@
-#youtube-clone
+# YouTube-clone(NOT-YOUTUBE)
 This is the frontend part of a clone of youtube made using React.js, Node.js, Express.JS, MongoDB and Firebase. The client/frontend is hosted on Netlify and server/backend is hosted on Heroku.
 
 # Features
@@ -10,10 +10,21 @@ This is the frontend part of a clone of youtube made using React.js, Node.js, Ex
 6. Similar video recommendation on the side panel, etc.
 
 # Frontend
-1.Made uing React.js.
+1. Made uing React.js.
 2. Styling is done using React Components.
 3. JWT and Firebase authentication are used for authentication.
 4. Redux is used for state management.
+
+# Screenshots
+![Screenshot from 2022-09-09 20-51-32](https://user-images.githubusercontent.com/62903302/189467079-1a5b471c-1f99-4700-af25-7d70ffaa79d4.png)
+
+![Screenshot from 2022-09-09 20-51-27](https://user-images.githubusercontent.com/62903302/189467085-198cbdd2-4c18-425a-9527-b070a32fece9.png)
+
+![Screenshot from 2022-09-09 20-52-17](https://user-images.githubusercontent.com/62903302/189467087-86fe75d5-6cc3-4ad5-8904-59301e5909b3.png)
+
+![Screenshot from 2022-09-09 20-52-54](https://user-images.githubusercontent.com/62903302/189467090-3b92a8f0-af15-4188-a8bc-ff4404ca43bf.png)
+
+![Screenshot from 2022-09-09 20-55-05](https://user-images.githubusercontent.com/62903302/189467092-ef4e9b98-6203-40d4-a78b-1111988b8422.png)
 
 
 
